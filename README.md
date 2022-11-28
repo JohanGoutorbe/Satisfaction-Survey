@@ -5,4 +5,6 @@ Langage of the survey : Fr-fr
 Import the MySQL file "script.sql" in your database. 
 The architecture of the database is now already created.
 
+Watch out !!! The database configuration is local based, with a "localhost" database server and an administrator ID without a password.
+
 Then, run the index.php file.

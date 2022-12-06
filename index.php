@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href=".\style.css">
 	<link rel="icon" type="image/png" href="favicon.png">
 	<title>Enquête de satisfaction | Office Center</title>
 	<?php
@@ -21,15 +21,16 @@
 	$tech = $results['tech'];
 	$date = $results['date'];
 
-	//http://localhost/chantier_application/?inter=120185&tech=charles&date=2022-11-22
+	// https://www.officecenter.fr/qualite/?inter=120185&tech=charles&date=22-11-2022
+
 	?>
 </head>
 <body>
 	<div class="container">
 		<div class="form">
 			<h1 class="h1">Veuillez évaluer le service d'Office Center</h1><br>
-			<p>Nous mettons tout en œuvre pour améliorer Office Center.<br>Faites-nous part de votre expérience avec cette page.</p><br>
-			<form method="post" action="send.php/?inter=<?php echo $inter; ?>&tech=<?php echo $tech; ?>&date=<?php echo $date; ?>">
+			<p class="pres">Nous mettons tout en œuvre pour améliorer la qualité de Office Center.</p><p class="pres">Faites-nous part de votre expérience avec cette page.</p><br>
+			<form method="post" action="https://www.officecenter.fr/qualite/send.php/?inter=<?php echo $inter; ?>&tech=<?php echo $tech; ?>&date=<?php echo $date; ?>">
 				<div class="form-group">
 					<div class="choice1">
 						<p class="question">Comment évaluez-vous la qualité de l'intervention ?</p>
@@ -37,7 +38,7 @@
 						<div class="input-group1">
 							<div class="input">
 								<input type="radio" name="choice1" id="rateChoice0" value="<?php echo $var1_1; ?>">
-								<label for="rateChoice0">Déplorable !</label>
+								<label for="rateChoice0">Médiocre</label>
 							</div>
 							<div class="input">
 								<input type="radio" name="choice1" id="rateChoice1" value="<?php echo $var1_2; ?>">
@@ -49,11 +50,11 @@
 							</div>
 							<div class="input">
 								<input type="radio" name="choice1" id="rateChoice3" value="<?php echo $var1_4; ?>">
-								<label for="rateChoice3">Satisfaisant</label>
+								<label for="rateChoice3">Bien</label>
 							</div>
 							<div class="input">
 								<input type="radio" name="choice1" id="rateChoice4" value="<?php echo $var1_5; ?>">
-								<label for="rateChoice4">Excellent !</label>
+								<label for="rateChoice4">Excellent</label>
 							</div>
 						</div><br>
 							<textarea type="text" name="comment1" class="comment1" autocomplete="off" placeholder="Développer votre choix ! (facultatif)" value="0"></textarea><br/>
@@ -65,7 +66,7 @@
 						<div class="input-group2">
 							<div class="input">
 								<input type="radio" name="choice2" id="rateChoice5" value="<?php echo $var2_1; ?>">
-								<label for="rateChoice5">Déplorable !</label>
+								<label for="rateChoice5">Médiocre</label>
 							</div>
 							<div class="input">
 								<input type="radio" name="choice2" id="rateChoice6" value="<?php echo $var2_2; ?>">
@@ -77,11 +78,11 @@
 							</div>
 							<div class="input">
 								<input type="radio" name="choice2" id="rateChoice8" value="<?php echo $var2_4; ?>">
-								<label for="rateChoice8">Satisfaisant</label>
+								<label for="rateChoice8">Bien</label>
 							</div>
 							<div class="input">
 								<input type="radio" name="choice2" id="rateChoice9" value="<?php echo $var2_5; ?>">
-								<label for="rateChoice9">Excellent !</label>
+								<label for="rateChoice9">Excellent</label>
 							</div>
 						</div><br>
 						<textarea type="text" name="comment2" class="comment2" autocomplete="off" placeholder="Développer votre choix ! (facultatif)" value="0"></textarea>
@@ -92,13 +93,8 @@
 				</div>
 
 			</form>
-			<br><br><p>Si vous avez besoin d'un support technique, veuillez <a href="https://www.officecenter.fr/#intervention" target="_blank">nous contacter</a>.</p>
+			<p class="support">Si vous avez besoin d'un support technique, veuillez <a href="https://www.officecenter.fr/#intervention" target="_blank">nous contacter</a>.</p>
 		</div>
 	</div>
-	<?php
-	$interid = '<script type="text/javascript">document.write(interid);</script>';
-	$techname = '<script type="text/javascript">document.write(techname);</script>';
-	$interdt = '<script type="text/javascript">document.write(interdt);</script>';
-	?>
 </body>
 </html>

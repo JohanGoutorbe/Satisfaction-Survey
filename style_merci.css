@@ -1,0 +1,33 @@
+.container{
+	width: 700px;
+}
+.block{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	padding: 20px;
+	background: white;
+	border-radius: 4px;
+	box-shadow: 0 0 50px 10px rgba(0,0,0,.55);
+	min-width: 300px;
+}
+.h1{
+	display: flex;
+	text-align: center;
+	color: #222;
+	font-size: 48px;
+	color: #1B74E4;
+}
+.img{
+	left: ;
+	transform: translate(150%,5%);
+	width: 25%;
+}
+.h1bis{
+	display: flex;
+	text-align: center;
+	color: #222;
+	font-size: 48px;
+	color: #F60000;
+}

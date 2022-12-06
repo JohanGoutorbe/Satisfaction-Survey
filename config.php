@@ -1,13 +1,16 @@
 <?php
 session_start();
-$db_username = 'root';
-$db_password = '';
-$db_name = 'DB_projet';
-$db_host = 'localhost';
+
+define('USER',"officecequalit");
+define('PASSWD',"Bimbamboum22");
+define('SERVER',"officecequalit.mysql.db");
+define('BASE',"officecequalit");
+
+$dsn = "mysql:dbname=".BASE.";host=".SERVER;
 
 try {
-	$db = new PDO('mysql:host=localhost;dbname=DB_projet', $db_username, $db_password);
+	$db = new PDO($dsn,USER,PASSWD);
 }
-catch (Exception $e) {
+catch (PDOException $e) {
 	die('Erreur : ' . $e->getMessage() . "<br>");
 }

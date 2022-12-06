@@ -62,9 +62,9 @@ $newdt = $dt->format('d-m-Y');
 if ($interidexist == 0) {
 	$sql = $db->query('INSERT INTO customersatisfaction (inter_id, tech_name, answer1, answer2, comment1, comment2, survey_date, inter_date) VALUES ("'.$interid.'", "'.$techname.'", '.$choice1.', '.$choice2.', "'.$comment1.'", "'.$comment2.'", "'.$newdt.'", "'.$interdt.'")');
 } else { 
-	header('location: https://www.officecenter.fr/qualite/error.php/');
+	header('location: https://www.officecenter.fr/qualite/error.php');
 	die();
 }
 
 sleep(0.5);
-header('location: https://www.officecenter.fr/qualite/merci.php/');
+header('location: https://www.officecenter.fr/qualite/merci.php');

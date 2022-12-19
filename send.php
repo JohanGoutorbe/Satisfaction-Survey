@@ -12,7 +12,7 @@
 
 <?php
 
-$pasDeCommentaire = "No_comment"
+$pasDeCommentaire = "no_comment"
 
 include("config.php");
 

@@ -30,7 +30,7 @@
 		<div class="form">
 			<h1 class="h1">Veuillez évaluer le service d'Office Center</h1><br>
 			<p class="pres">Nous mettons tout en œuvre pour améliorer la qualité de Office Center.</p><p class="pres">Faites-nous part de votre expérience avec cette page.</p><br>
-			<form method="post" action="https://www.officecenter.fr/qualite/send.php/?inter=<?php echo $inter; ?>&tech=<?php echo $tech; ?>&date=<?php echo $date; ?>">
+			<form method="post" action="https://www.officecenter.fr/qualite/send.php/?inter=<?php echo $inter; ?>&tech=<?php echo $tech; ?>&date=<?php echo $date; ?>" accept-charset="UTF-8">
 				<div class="form-group">
 					<div class="choice1">
 						<p class="question">Comment évaluez-vous la qualité de l'intervention ?</p>

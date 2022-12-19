@@ -19,4 +19,3 @@ Name of the folder : chantier_application
 URL based on : http://localhost/chantier_application/?inter=120185&tech=charles&date=2022-11-22
 
 
-Then, run the index.php file and enjoy !

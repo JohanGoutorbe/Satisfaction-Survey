@@ -12,6 +12,8 @@
 
 <?php
 
+$pasDeCommentaire = "No_comment"
+
 include("config.php");
 
 if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
@@ -61,20 +63,18 @@ $interidexist = $reqinterid->rowCount();
 $choice1 = (int)$_POST['choice1'];
 
 if (!empty($_POST['comment1'])) {
-	$comment11 = htmlspecialchars($_POST['comment1']);
-	$comment1 = utf8_encode($comment11);
+	$comment1 = htmlspecialchars($_POST['comment1']);
 
 }else {
-	$comment1 = "empty";
+	$comment1 = $pasDeCommentaire;
 }
 
 $choice2 = (int)$_POST['choice2'];
 
 if (!empty($_POST['comment2'])) {
-	$comment22 = htmlspecialchars($_POST['comment2']);
-	$comment2 = utf8_encode($comment22);
+	$comment2 = htmlspecialchars($_POST['comment2']);
 }else {
-	$comment2 = "empty";
+	$comment2 = $pasDeCommentaire;
 }
 
 $dt = new \DateTime();

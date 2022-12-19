@@ -13,6 +13,6 @@
 			<h1 class="h1">Merci d'avoir donné votre avis !</h1>
 		</div>
 	</div>
-
+	<?php $db=null;	die(); ?>
 </body>
 </html>

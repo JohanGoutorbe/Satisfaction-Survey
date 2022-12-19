@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href=".\style_merci.css">
+	<link rel="icon" type="image/png" href=".\favicon.png">
+	<title>Une erreur est survenue</title>
+</head>
+<body>
+	<div class="container">
+
 <?php
 
 include("config.php");
@@ -18,18 +30,27 @@ $techname = $results['tech'];
 $interdt = $results['date'];
 
 if (isset($_POST['choice1'])==null && isset($_POST['choice2'])==null) { ?>
-	<p style='color:red'>Veuillez remplir correctement le formulaire</p>
-	<a href="https://www.officecenter.fr/qualite/index.php?inter=<?php echo $interid; ?>&tech=<?php echo $techname; ?>&date=<?php echo $interdt; ?>"><button class="btn">Retour au formulaire</button></a>
+	<div class="block">
+		<img src="x.png" class="img">
+		<h1 class="h1bis">Veuillez remplir correctement le formulaire</h1>
+		<a href="https://www.officecenter.fr/qualite/index.php?inter=<?php echo $interid; ?>&tech=<?php echo $techname; ?>&date=<?php echo $interdt; ?>"><button class="btn">Retour au formulaire</button></a>
+	</div>
 	<?php $db=null;
 	die();
 }elseif (isset($_POST['choice1'])==null) { ?>
-	<p style='color:red'>Veuillez remplir correctement le formulaire</p>
-	<a href="https://www.officecenter.fr/qualite/index.php?inter=<?php echo $interid; ?>&tech=<?php echo $techname; ?>&date=<?php echo $interdt; ?>"><button class="btn">Retour au formulaire</button></a>
+	<div class="block">
+		<img src="x.png" class="img">
+		<h1 class="h1bis">Veuillez remplir correctement le formulaire</h1>
+		<a href="https://www.officecenter.fr/qualite/index.php?inter=<?php echo $interid; ?>&tech=<?php echo $techname; ?>&date=<?php echo $interdt; ?>"><button class="btn">Retour au formulaire</button></a>
+	</div>
 	<?php $db=null;
 	die();
 }elseif (isset($_POST['choice2'])==null) { ?>
-	<p style='color:red'>Veuillez remplir correctement le formulaire</p>
-	<a href="https://www.officecenter.fr/qualite/index.php?inter=<?php echo $interid; ?>&tech=<?php echo $techname; ?>&date=<?php echo $interdt; ?>"><button class="btn">Retour au formulaire</button></a>
+	<div class="block">
+		<img src="x.png" class="img">
+		<h1 class="h1bis">Veuillez remplir correctement le formulaire</h1>
+		<a href="https://www.officecenter.fr/qualite/index.php?inter=<?php echo $interid; ?>&tech=<?php echo $techname; ?>&date=<?php echo $interdt; ?>"><button class="btn">Retour au formulaire</button></a>
+	</div>
 	<?php $db=null;
 	die();
 }
@@ -68,3 +89,7 @@ if ($interidexist == 0) {
 
 sleep(0.5);
 header('location: https://www.officecenter.fr/qualite/merci.php');
+?>
+	</div>
+</body>
+</html>

@@ -1,5 +1,9 @@
-# satisfaction_survey
+# Arakelian's Satisfaction Survey
  
+Welcome to the Arakelian's satisfaction survey !
+
+## Gettting Started
+
 Langage of the survey : Fr-fr (comments in english).
 
 Import the MySQL file "script.sql" in your database. 

@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href=".\style_merci.css">
-	<link rel="icon" type="image/png" href=".\favicon.png">
-	<title>Une erreur est survenue</title>
-</head>
-<body>
-	<div class="container">
-
 <?php
-
-$pasDeCommentaire = "no_comment"
 
 include("config.php");
 
@@ -66,7 +52,7 @@ if (!empty($_POST['comment1'])) {
 	$comment1 = htmlspecialchars($_POST['comment1']);
 
 }else {
-	$comment1 = $pasDeCommentaire;
+	$comment1 = "";
 }
 
 $choice2 = (int)$_POST['choice2'];
@@ -74,7 +60,7 @@ $choice2 = (int)$_POST['choice2'];
 if (!empty($_POST['comment2'])) {
 	$comment2 = htmlspecialchars($_POST['comment2']);
 }else {
-	$comment2 = $pasDeCommentaire;
+	$comment2 = "";
 }
 
 $dt = new \DateTime();
@@ -89,7 +75,3 @@ if ($interidexist == 0) {
 
 sleep(0.5);
 header('location: https://www.officecenter.fr/qualite/merci.php');
-?>
-	</div>
-</body>
-</html>

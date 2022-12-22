@@ -16,3 +16,8 @@
 	<?php $db=null;	die(); ?>
 </body>
 </html>
+
+<?php 
+sleep(0.5);
+header('location: https://www.officecenter.fr');
+?>
